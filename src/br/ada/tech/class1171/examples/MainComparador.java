@@ -1,3 +1,5 @@
+package br.ada.tech.class1171.examples;
+
 import java.util.Comparator;
 
 public class MainComparador {

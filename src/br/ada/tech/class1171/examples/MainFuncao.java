@@ -1,9 +1,8 @@
+package br.ada.tech.class1171.examples;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Comparator;
 import java.util.Scanner;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 public class MainFuncao {
 

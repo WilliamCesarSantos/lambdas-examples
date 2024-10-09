@@ -1,3 +1,5 @@
+package br.ada.tech.class1171.examples;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
@@ -9,7 +11,7 @@ public class MainComparadorLista {
 
         // 1 - Usando lambdas faça a ordenação da lista de forma crescente
         Comparator<Integer> crescente = (first, second) -> {
-            System.out.println("Comparando idades");
+            System.out.println("Comparando valores [" + first + " > " + second + "]");
             return first - second;
         };
         numerosAleatorios.sort(crescente);

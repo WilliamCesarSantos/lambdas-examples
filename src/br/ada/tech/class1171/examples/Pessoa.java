@@ -1,3 +1,5 @@
+package br.ada.tech.class1171.examples;
+
 import java.time.LocalDate;
 
 public class Pessoa {
@@ -38,7 +40,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
+        return "br.ada.tech.class1171.examples.Pessoa{" +
                 "nome='" + nome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", dataNascimento=" + dataNascimento +

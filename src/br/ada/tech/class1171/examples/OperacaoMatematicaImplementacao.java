@@ -1,3 +1,5 @@
+package br.ada.tech.class1171.examples;
+
 import java.math.BigDecimal;
 
 public class OperacaoMatematicaImplementacao implements OperacaoMatematica {

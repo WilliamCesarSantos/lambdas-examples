@@ -1,3 +1,5 @@
+package br.ada.tech.class1171.examples;
+
 import java.math.BigDecimal;
 
 // Esse interface não é funcional. Tem mais de um método abstrato
