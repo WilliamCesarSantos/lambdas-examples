@@ -1,5 +1,6 @@
-package br.ada.tech.class1171.practices.numer;
+package br.ada.tech.class1171.practices.number;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -7,11 +8,7 @@ import java.util.Set;
 public class NumberPractice {
 
     private static final Integer[] NUMBERS = {4, 1, 1, 8, 1, 7, 3, 2, 3, 4};
-
-    public Map<Integer, Long> countRepeatedNumber() {
-        // Calcule quantas vezes cada número aparece na lista. Exemplo de retorno: 4 -> 2, 1 -> 3
-        return Map.of();
-    }
+//    Arrays.stream(NUMBERS)
 
     public List<Integer> numbersLessThan5() {
         // Filtre todos os números que são menor que 5
@@ -31,6 +28,11 @@ public class NumberPractice {
     public Integer sumNumbersWithoutRepeats() {
         // Some todos os números, porém não utilize os repetidos
         return 0;
+    }
+
+    public Map<Integer, Long> countRepeatedNumber() {
+        // Conte quantas vezes cada número aparece na lista. Exemplo de retorno: 4 -> 2, 1 -> 3
+        return Map.of();
     }
 
 }

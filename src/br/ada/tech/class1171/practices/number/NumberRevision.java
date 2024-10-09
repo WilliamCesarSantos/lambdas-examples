@@ -1,4 +1,4 @@
-package br.ada.tech.class1171.practices.numer;
+package br.ada.tech.class1171.practices.number;
 
 import br.ada.tech.class1171.practices.Reviewer;
 
@@ -10,16 +10,6 @@ public class NumberRevision {
     public static void main(String[] args) {
         Reviewer reviewer = new Reviewer();
         NumberPractice practices = new NumberPractice();
-
-        System.out.println("-----------------------------");
-        reviewer.valid("countRepeatedNumber", practices::countRepeatedNumber, result ->
-                result.get(4) == 2
-                        && result.get(1) == 3
-                        && result.get(8) == 1
-                        && result.get(7) == 1
-                        && result.get(3) == 2
-                        && result.get(2) == 1
-        );
 
         System.out.println("-----------------------------");
         reviewer.valid("removeRepeatNumbers", practices::removeRepeatNumbers, result ->
@@ -40,6 +30,16 @@ public class NumberRevision {
         System.out.println("-----------------------------");
         reviewer.valid("sumNumbersWithoutRepeats", practices::sumNumbersWithoutRepeats, result ->
                 result == 25
+        );
+
+        System.out.println("-----------------------------");
+        reviewer.valid("countRepeatedNumber", practices::countRepeatedNumber, result ->
+                result.get(4) == 2
+                        && result.get(1) == 3
+                        && result.get(8) == 1
+                        && result.get(7) == 1
+                        && result.get(3) == 2
+                        && result.get(2) == 1
         );
     }
 }
