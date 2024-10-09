@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BuilderHelper {
+public class DataHelper {
 
     public static List<Product> products() {
         List<Product> products = new ArrayList<>();
@@ -36,11 +36,11 @@ public class BuilderHelper {
         return products;
     }
 
-    public List<Customer> customers() {
+    public static List<Customer> customers() {
         List<Customer> customers = new ArrayList<>();
         customers.add(new Customer(1L, "Alice Johnson", "1234567890", LocalDate.of(1985, 11, 15)));
         customers.add(new Customer(2L, "Bob Smith", "9876543210", LocalDate.of(1990, 5, 20)));
-        customers.add(new Customer(3L, "Charlie Brown", "5555555555", LocalDate.of(1975, 9, 30)));
+        customers.add(new Customer(3L, "Bob Brown", "5555555555", LocalDate.of(1975, 9, 30)));
         customers.add(new Customer(4L, "David Lee", "4444444444", LocalDate.of(1995, 2, 10)));
         customers.add(new Customer(5L, "Emily Davis", "3333333333", LocalDate.of(1988, 7, 25)));
         customers.add(new Customer(6L, "Frank Wilson", "2222222222", LocalDate.of(1970, 12, 5)));
@@ -51,7 +51,7 @@ public class BuilderHelper {
         return customers;
     }
 
-    public List<Order> orders() {
+    public static List<Order> orders() {
         List<Customer> customers = customers();
         List<Product> products = products();
 
@@ -59,7 +59,7 @@ public class BuilderHelper {
 
         for (int i = 0; i < 30; i++) {
             long orderId = i + 1;
-            LocalDate orderDate = LocalDate.now().minusDays(i);
+            LocalDate orderDate = LocalDate.now().minusMonths(i);
 
             int customerIndex = i % customers.size();
             Customer customer = customers.get(customerIndex);
@@ -73,21 +73,7 @@ public class BuilderHelper {
 
             orders.add(new Order(orderId, orderDate, customer, orderProducts));
         }
-        for (Order order : orders) {
-            System.out.println(order);
-        }
         return orders;
-    }
-
-    public static void main(String[] args) {
-        System.out.print("{");
-        for (Product product : new BuilderHelper().products()) {
-            System.out.print("\"");
-            System.out.print(product.getName());
-            System.out.print("\"");
-            System.out.print(", ");
-        }
-        System.out.print("}");
     }
 
 }

@@ -10,27 +10,27 @@ public class NumberPractice {
 
     public Map<Integer, Long> countRepeatedNumber() {
         // Calcule quantas vezes cada número aparece na lista. Exemplo de retorno: 4 -> 2, 1 -> 3
-        return null;
+        return Map.of();
     }
 
     public List<Integer> numbersLessThan5() {
         // Filtre todos os números que são menor que 5
-        return null;
+        return List.of();
     }
 
     public Set<Integer> removeRepeatNumbers() {
         // Remova os números repetidos
-        return null;
+        return Set.of();
     }
 
     public Integer sumAllNumbers() {
         // Calcule a soma total dos números.
-        return null;
+        return 0;
     }
 
     public Integer sumNumbersWithoutRepeats() {
         // Some todos os números, porém não utilize os repetidos
-        return null;
+        return 0;
     }
 
 }
