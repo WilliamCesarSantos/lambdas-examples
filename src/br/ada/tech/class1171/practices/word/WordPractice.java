@@ -1,7 +1,10 @@
 package br.ada.tech.class1171.practices.word;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 public class WordPractice {
 
@@ -9,22 +12,36 @@ public class WordPractice {
 
     public List<String> wordsLessThan5Characters() {
         //Filtre apenas palavras que possuem menos de 5 caracteres
-        return List.of();
+        return Arrays.stream(WORDS)
+                .filter(word -> word.length() < 5)
+                .collect(Collectors.toList());
     }
 
     public List<String> words5Characters() {
         // Filtre apenas palavras que possuem 5 caracteres
-        return List.of();
+        return Arrays.stream(WORDS)
+                .filter(word -> word.length() == 5)
+                .collect(Collectors.toList());
     }
 
     public List<String> wordsGreaterThan5Characters() {
         // Filtre apenas palavras que possuem mais de 5 caracteres
-        return List.of();
+        return Arrays.stream(WORDS)
+                .filter(word -> word.length() > 5)
+                .collect(Collectors.toList());
     }
 
     public List<String> wordsArePalindromes() {
         // Identifique e retorne as palavras que sejam palíndromos(são iguais de trás para frente, exemplo: Radar)
-        return List.of();
+        return Arrays.stream(WORDS)
+                .filter(word -> {
+                    var reserved = reverse(word);
+                    return word.equalsIgnoreCase(reserved);
+                }).collect(Collectors.toList());
+    }
+
+    private String reverse(String value) {
+        return new StringBuilder(value).reverse().toString();
     }
 
     public Map<String, Integer> countLetterEachWord() {
