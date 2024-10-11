@@ -3,7 +3,6 @@ package br.ada.tech.class1171.practices.word;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
 public class WordPractice {
@@ -46,13 +45,30 @@ public class WordPractice {
 
     public Map<String, Integer> countLetterEachWord() {
         //Calcule quantos caracteres cada palavra têm, o retorno deve ser a palavra -> quantidade de carateres. Exemplo: Osso -> 4
-        return Map.of();
+        return Arrays.stream(WORDS)
+                .collect(
+                        Collectors.toMap(
+                                word -> word,
+                                word -> word.length()
+                        )
+                );
     }
 
 
     public Integer countLettersAllWordHave() {
         // Calcule quantos caracteres tem todas as palavras têm juntas.
-        return 0;
+//        Arrays.stream(WORDS)
+//                .mapToInt(String::length)
+//                .sum();
+//
+//        Arrays.stream(WORDS)
+//                .collect(Collectors.joining())
+//                .length();
+
+        return Arrays.stream(WORDS)
+                .map(String::length)
+                .reduce((first, second) -> first + second)
+                .orElse(0);
     }
 
 }
