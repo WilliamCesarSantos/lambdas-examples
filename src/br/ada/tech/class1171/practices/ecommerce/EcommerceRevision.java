@@ -67,7 +67,7 @@ public class EcommerceRevision {
 
         System.out.println("-----------------------------");
         reviewer.valid("mostExpansiveOrder", practices::mostExpansiveOrder, result ->
-                result.map(Order::getId).orElse(0l) == 9l
+                result.map(Order::getId).orElse(0l) == 3l
         );
 
         System.out.println("-----------------------------");
