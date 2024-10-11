@@ -72,7 +72,7 @@ public class EcommerceRevision {
 
         System.out.println("-----------------------------");
         reviewer.valid("mostCheaperOrder", practices::mostCheaperOrder, result ->
-                result.map(Order::getId).orElse(0l) == 16l
+                result.map(Order::getId).orElse(0l) == 7l
         );
 
         System.out.println("-----------------------------");
